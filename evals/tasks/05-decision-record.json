@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "We chose Postgres over MongoDB for orders. Where should I record this decision in this repo? Answer with the path only.",
+  "must": [
+    "docs/adr/"
+  ],
+  "must_not": []
+}

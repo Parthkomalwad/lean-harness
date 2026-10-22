@@ -1,0 +1,10 @@
+{
+  "skill": "agents-md",
+  "prompt": "Our HTTP client retries 3 times. Nobody has ever changed this. Should I add a config option for the retry count? Answer in one short paragraph.",
+  "must": [
+    "(?i)\\b(no|not|don.t|skip|YAGNI)\\b"
+  ],
+  "must_not": [
+    "\u2014"
+  ]
+}

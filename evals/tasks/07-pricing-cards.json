@@ -1,0 +1,12 @@
+{
+  "skill": "ui-taste",
+  "prompt": "Write HTML and CSS for a pricing section with three plans for a team chat app. Output only the code.",
+  "must": [
+    "<section"
+  ],
+  "must_not": [
+    "(?i)lorem ipsum",
+    "[\\u{1F300}-\\u{1FAFF}]",
+    "(?i)linear-gradient\\([^)]*(purple|violet|indigo)"
+  ]
+}

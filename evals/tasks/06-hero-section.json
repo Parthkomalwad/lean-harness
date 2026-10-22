@@ -1,0 +1,13 @@
+{
+  "skill": "ui-taste",
+  "prompt": "Write a single HTML file with inline CSS for the hero section of a landing page for a personal budgeting app. Output only the code.",
+  "must": [
+    "<h1"
+  ],
+  "must_not": [
+    "(?i)lorem ipsum",
+    "(?i)linear-gradient\\([^)]*(purple|violet|indigo|#8b5cf6|#7c3aed|#6366f1)",
+    "(?i)box-shadow:[^;]*0 0 \\d+px",
+    "[\\u{1F300}-\\u{1FAFF}]"
+  ]
+}

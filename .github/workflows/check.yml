@@ -1,0 +1,31 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install APM
+        run: curl -sSL https://aka.ms/apm-unix | sh
+      - name: APM install
+        run: apm install
+      - name: APM security scan
+        run: apm audit --ci
+      - name: Lint logic self test
+        run: node scripts/selftest.mjs
+      - name: STE lint
+        run: node scripts/ste-lint.mjs
+      - name: Token budget
+        run: node scripts/budget.mjs
+      - name: No em dashes
+        run: node scripts/no-em-dash.mjs
+      - name: Eval smoke test
+        run: node scripts/eval.mjs --smoke

@@ -1,0 +1,10 @@
+{
+  "skill": "ui-taste",
+  "prompt": "Review this page and list problems: <body style=\"text-align:center;background:linear-gradient(purple,blue)\"><h1>Welcome to the Future</h1><p>Lorem ipsum dolor sit amet.</p><button>Start</button><button>Learn</button><button>Pricing</button><button>Contact</button></body>",
+  "must": [
+    "(?i)gradient",
+    "(?i)(lorem|placeholder|real content)",
+    "(?i)(one (primary )?action|too many|choices|competing)"
+  ],
+  "must_not": []
+}

@@ -1,0 +1,11 @@
+{
+  "skill": "agents-md",
+  "prompt": "Write only the git commit message for this change: added a rate limiter to the login endpoint, 5 attempts per minute per IP.",
+  "must": [
+    "^(feat|fix)(\\(\\w+\\))?: .{1,60}$"
+  ],
+  "must_not": [
+    "Co-Authored-By:",
+    "Generated with"
+  ]
+}

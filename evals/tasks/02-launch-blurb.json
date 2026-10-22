@@ -1,0 +1,12 @@
+{
+  "skill": "agents-md",
+  "prompt": "Write a two-paragraph announcement for a CLI tool that turns CSV files into charts. Output only the text.",
+  "must": [
+    "\\w"
+  ],
+  "must_not": [
+    "\u2014",
+    "(?i)revolutionary",
+    "(?i)game-changing"
+  ]
+}

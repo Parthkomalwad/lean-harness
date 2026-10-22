@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<rect width="900" height="420" rx="18" fill="#FAF9F5"/>
+<text x="60" y="62" font-size="13" fill="#6B6862">v1  agentic-harness</text>
+<text x="520" y="62" font-size="13" fill="#C4623F">v2  lean-harness</text>
+<rect x="60" y="86" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="87" y="111" font-size="7" text-anchor="middle" fill="#6B6862">core</text>
+<rect x="124" y="86" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="151" y="111" font-size="7" text-anchor="middle" fill="#6B6862">harness-b.</text>
+<rect x="188" y="86" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="215" y="111" font-size="7" text-anchor="middle" fill="#6B6862">system-one</text>
+<rect x="252" y="86" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="279" y="111" font-size="7" text-anchor="middle" fill="#6B6862">memory-pa.</text>
+<rect x="316" y="86" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="343" y="111" font-size="7" text-anchor="middle" fill="#6B6862">ui-pack</text>
+<rect x="60" y="138" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="87" y="163" font-size="7" text-anchor="middle" fill="#6B6862">motion-pa.</text>
+<rect x="124" y="138" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="151" y="163" font-size="7" text-anchor="middle" fill="#6B6862">docs-pack</text>
+<rect x="188" y="138" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="215" y="163" font-size="7" text-anchor="middle" fill="#6B6862">orchestra.</text>
+<rect x="252" y="138" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="279" y="163" font-size="7" text-anchor="middle" fill="#6B6862">db-pack</text>
+<rect x="316" y="138" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="343" y="163" font-size="7" text-anchor="middle" fill="#6B6862">council-p.</text>
+<rect x="60" y="190" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="87" y="215" font-size="7" text-anchor="middle" fill="#6B6862">architect.</text>
+<rect x="124" y="190" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="151" y="215" font-size="7" text-anchor="middle" fill="#6B6862">glassbox</text>
+<rect x="188" y="190" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="215" y="215" font-size="7" text-anchor="middle" fill="#6B6862">research-.</text>
+<rect x="252" y="190" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="279" y="215" font-size="7" text-anchor="middle" fill="#6B6862">deploy-pa.</text>
+<rect x="316" y="190" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="343" y="215" font-size="7" text-anchor="middle" fill="#6B6862">test-pack</text>
+<rect x="60" y="242" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="87" y="267" font-size="7" text-anchor="middle" fill="#6B6862">security-.</text>
+<rect x="124" y="242" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="151" y="267" font-size="7" text-anchor="middle" fill="#6B6862">observabi.</text>
+<rect x="188" y="242" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="215" y="267" font-size="7" text-anchor="middle" fill="#6B6862">ship-pack</text>
+<rect x="252" y="242" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="279" y="267" font-size="7" text-anchor="middle" fill="#6B6862">launch-pa.</text>
+<rect x="316" y="242" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="343" y="267" font-size="7" text-anchor="middle" fill="#6B6862">superpowe.</text>
+<rect x="60" y="294" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="87" y="319" font-size="7" text-anchor="middle" fill="#6B6862">taste-ski.</text>
+<rect x="124" y="294" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="151" y="319" font-size="7" text-anchor="middle" fill="#6B6862">playwrigh.</text>
+<rect x="188" y="294" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="215" y="319" font-size="7" text-anchor="middle" fill="#6B6862">web-desig.</text>
+<rect x="252" y="294" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="279" y="319" font-size="7" text-anchor="middle" fill="#6B6862">session-m.</text>
+<rect x="316" y="294" width="54" height="42" rx="6" fill="#ECEAE3" stroke="#DAD7CE"/>
+<text x="343" y="319" font-size="7" text-anchor="middle" fill="#6B6862">firecrawl</text>
+<path d="M400 210 H480" stroke="#C4623F" stroke-width="2"/><path d="M472 202 L482 210 L472 218" fill="none" stroke="#C4623F" stroke-width="2"/>
+<rect x="520" y="86" width="320" height="42" rx="8" fill="none" stroke="#C4623F" stroke-width="1.4"/>
+<text x="538" y="112" font-size="14" font-weight="700" fill="#1F1E1D">AGENTS.md</text>
+<text x="822" y="112" font-size="11" text-anchor="end" fill="#6B6862">knowledge: only the delta</text>
+<rect x="520" y="138" width="320" height="42" rx="8" fill="none" stroke="#C4623F" stroke-width="1.4"/>
+<text x="538" y="164" font-size="14" font-weight="700" fill="#1F1E1D">apm.yml</text>
+<text x="822" y="164" font-size="11" text-anchor="end" fill="#6B6862">dependencies, pinned</text>
+<rect x="520" y="190" width="320" height="42" rx="8" fill="none" stroke="#C4623F" stroke-width="1.4"/>
+<text x="538" y="216" font-size="14" font-weight="700" fill="#1F1E1D">herdr/</text>
+<text x="822" y="216" font-size="11" text-anchor="end" fill="#6B6862">runtime: panes, sessions</text>
+<rect x="520" y="242" width="320" height="42" rx="8" fill="none" stroke="#C4623F" stroke-width="1.4"/>
+<text x="538" y="268" font-size="14" font-weight="700" fill="#1F1E1D">justfile + CI</text>
+<text x="822" y="268" font-size="11" text-anchor="end" fill="#6B6862">enforcement</text>
+<rect x="520" y="294" width="320" height="42" rx="8" fill="none" stroke="#C4623F" stroke-width="1.4"/>
+<text x="538" y="320" font-size="14" font-weight="700" fill="#1F1E1D">evals/</text>
+<text x="822" y="320" font-size="11" text-anchor="end" fill="#6B6862">proof</text>
+<text x="60" y="384" font-size="13" fill="#6B6862">25 packs, Claude Code only, 1,782 tokens always loaded</text>
+<text x="840" y="384" font-size="13" text-anchor="end" fill="#1F1E1D">5 layers, Claude Code + Codex, <tspan fill="#C4623F" font-weight="700">454 tokens</tspan></text>
+</svg>

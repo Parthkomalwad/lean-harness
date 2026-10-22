@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "Give only the git branch name for a fix to a crash when the cart is empty.",
+  "must": [
+    "^\\W*fix/[a-z0-9-]+\\W*$"
+  ],
+  "must_not": []
+}

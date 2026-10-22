@@ -1,0 +1,12 @@
+{
+  "skill": "ui-taste",
+  "prompt": "Write HTML for a newsletter signup form with a marketing consent checkbox. Output only the code.",
+  "must": [
+    "<form"
+  ],
+  "must_not": [
+    "type=\"checkbox\"[^>]*\\bchecked\\b",
+    "(?i)only \\d+ (spots|left)",
+    "(?i)hurry"
+  ]
+}

@@ -1,0 +1,2 @@
+#!/bin/sh
+node scripts/ste-lint.mjs && node scripts/budget.mjs && node scripts/no-em-dash.mjs
