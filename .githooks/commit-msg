@@ -1,0 +1,9 @@
+#!/bin/sh
+# Enforces two AGENTS.md rules outside the model: no AI attribution, no em dashes.
+node -e '
+const msg = require("fs").readFileSync(process.argv[1], "utf8");
+const problems = [];
+if (/^(Co-Authored-By:.*(Claude|Copilot|Codex|GPT|anthropic|openai)|.*Generated with \[?Claude)/im.test(msg)) problems.push("AI attribution");
+if (msg.includes(String.fromCharCode(0x2014))) problems.push("em dash");
+if (problems.length) { console.error("Commit message has: " + problems.join(", ")); process.exit(1); }
+' "$1"

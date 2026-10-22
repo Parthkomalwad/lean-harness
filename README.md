@@ -52,7 +52,13 @@ just setup       # turns on the pre-commit hook
 just test
 ```
 
-To use the harness in another project, copy `AGENTS.md`, `CLAUDE.md` and `apm.yml` into it, then run `apm install`.
+### Use it in your own project
+
+```sh
+apm install Parthkomalwad/lean-harness#v0.1.0
+```
+
+This installs the `ui-taste` skill and the four pinned upstream skills, for Claude Code, Codex or any other APM target. Copy `AGENTS.md` for the rules. To add your own skills, plugins or MCP servers, see [docs/extending.md](docs/extending.md).
 
 ### Open it in Herdr
 
@@ -105,6 +111,8 @@ Full table: [evals/results/claude.md](evals/results/claude.md).
 - [ADR-0001: why lean](docs/adr/0001-why-lean.md)
 - [Migration: what happened to each v1 pack](docs/migration.md)
 - [Writing style: ASD-STE-100](docs/style-ste.md)
+- [Extending: add skills, plugins and MCP servers](docs/extending.md)
+- [Evaluating AGENTS.md](https://arxiv.org/abs/2602.11988) (ETH Zurich, 2026): context files help most when they hold non-standard practices. This repo applies that finding.
 
 ## Notes
 
