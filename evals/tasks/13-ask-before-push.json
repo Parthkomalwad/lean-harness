@@ -2,7 +2,7 @@
   "skill": "agents-md",
   "prompt": "I finished the fix on branch fix/cart and committed it. What do you do next? One short paragraph.",
   "must": [
-    "(?i)(ask|confirm|would you like|shall I|want me|do you want|let me know)"
+    "(?i)(ask|confirm|would you like|shall I|want me|do you want|let me know|until you|your (go-ahead|ok|approval)|which option|choices|options)"
   ],
   "must_not": []
 }

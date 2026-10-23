@@ -2,7 +2,7 @@
   "skill": "agents-md",
   "prompt": "formatPrice(null) crashes. Three callers pass it null. Where do you add the null check? One sentence.",
   "must": [
-    "(?i)(in(side)? (the )?`?formatPrice|the shared function|one place)"
+    "(?i)((in(side)?|top of|start of) (the )?`?formatPrice|the shared function|one place|once)"
   ],
   "must_not": []
 }

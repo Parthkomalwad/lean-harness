@@ -100,19 +100,21 @@ Claude Code, 3 runs per task, 2026-10-23:
 
 | Piece | With | Without | Gain |
 |---|---|---|---|
-| `AGENTS.md` | 29/30 (97%) | 26/30 (87%) | +10 points |
-| `ui-taste` skill | 15/15 (100%) | 12/15 (80%) | +20 points |
+| `AGENTS.md` | 45/45 (100%) | 39/45 (87%) | +13 points |
+| `ui-taste` skill | 15/15 (100%) | 11/15 (73%) | +27 points |
 
-What made the difference, in 3 of 3 runs each:
+What made the difference:
 
-- Without `AGENTS.md`, the commit message got a `Co-Authored-By` trailer for the AI.
-- Without `ui-taste`, the page review missed the "too many competing actions" problem.
+- Without `AGENTS.md`, the commit message got a `Co-Authored-By` trailer for the AI (3 of 3 runs).
+- Without `AGENTS.md`, the agent did not know to run `just test` before it reported a task as complete (3 of 3).
+- Without `ui-taste`, the page review missed the "too many competing actions" problem (3 of 3).
+- Without `ui-taste`, one hero section used an emoji as an icon (1 of 3).
 
-The model already did the rest without help: it kept `.env` out of the commit, skipped a needless abstraction and avoided a new dependency.
+The model already did the rest without help: it kept `.env` out of the commit, skipped a needless abstraction, avoided a new dependency and fixed the bug in the shared function.
+
+Each run uses an empty Claude Code config, so user-level rules and skills do not leak into the "without" runs.
 
 Most tasks pass both ways. That is the point of this repo: a current model already does most things well, so the harness holds only the small delta. The 2026 [ETH Zurich study](https://arxiv.org/abs/2602.11988) found the same: context files help most when they hold non-standard practices.
-
-Five newer tasks (16 to 20) hit a usage limit and show "n/a" in the full table. They do not count in the summary.
 <!-- eval:end -->
 
 Full table: [evals/results/claude.md](evals/results/claude.md).

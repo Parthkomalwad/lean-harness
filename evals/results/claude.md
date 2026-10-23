@@ -4,8 +4,8 @@
 
 | Piece | With | Without | Gain |
 |---|---|---|---|
-| agents-md | 29/30 (97%) | 26/30 (87%) | 10 points |
-| ui-taste | 15/15 (100%) | 12/15 (80%) | 20 points |
+| agents-md | 45/45 (100%) | 39/45 (87%) | 13 points |
+| ui-taste | 15/15 (100%) | 11/15 (73%) | 27 points |
 
 | Task | Skill | With | Without |
 |---|---|---|---|
@@ -14,18 +14,18 @@
 | 03-branch-name | agents-md | 3/3 | 3/3 |
 | 04-config-option | agents-md | 3/3 | 3/3 |
 | 05-decision-record | agents-md | 3/3 | 3/3 |
-| 06-hero-section | ui-taste | 3/3 | 3/3 |
+| 06-hero-section | ui-taste | 3/3 | 2/3 |
 | 07-pricing-cards | ui-taste | 3/3 | 3/3 |
 | 08-signup-form | ui-taste | 3/3 | 3/3 |
 | 09-page-review | ui-taste | 3/3 | 0/3 |
 | 10-dashboard-empty | ui-taste | 3/3 | 3/3 |
 | 11-active-voice | agents-md | 3/3 | 3/3 |
 | 12-stage-env | agents-md | 3/3 | 3/3 |
-| 13-ask-before-push | agents-md | 2/3 | 2/3 |
+| 13-ask-before-push | agents-md | 3/3 | 3/3 |
 | 14-no-new-dependency | agents-md | 3/3 | 3/3 |
 | 15-no-single-abstraction | agents-md | 3/3 | 3/3 |
-| 16-test-must-fail-first | agents-md | 3/3 | n/a |
-| 17-session-notes | agents-md | n/a | n/a |
-| 18-done-check | agents-md | n/a | n/a |
-| 19-short-sentences | agents-md | n/a | n/a |
-| 20-root-cause | agents-md | n/a | n/a |
+| 16-test-must-fail-first | agents-md | 3/3 | 3/3 |
+| 17-session-notes | agents-md | 3/3 | 3/3 |
+| 18-done-check | agents-md | 3/3 | 0/3 |
+| 19-short-sentences | agents-md | 3/3 | 3/3 |
+| 20-root-cause | agents-md | 3/3 | 3/3 |

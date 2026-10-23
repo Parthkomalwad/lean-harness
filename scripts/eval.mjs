@@ -1,8 +1,8 @@
 // Runs each task in evals/tasks with and without the skill it tests, then writes a results table.
-// Usage: node scripts/eval.mjs [--smoke] [--regrade] [--agent claude|codex] [--runs N] [--concurrency N]
-import { readdirSync, mkdtempSync, cpSync, rmSync, existsSync, writeFileSync, mkdirSync } from "node:fs";
+// Usage: node scripts/eval.mjs [--smoke] [--regrade] [--missing] [--agent claude|codex] [--runs N] [--concurrency N]
+import { readdirSync, mkdtempSync, cpSync, rmSync, existsSync, writeFileSync, mkdirSync, renameSync } from "node:fs";
 import { join } from "node:path";
-import { tmpdir } from "node:os";
+import { tmpdir, homedir } from "node:os";
 import { spawn } from "node:child_process";
 import { read } from "./lib.mjs";
 
@@ -15,9 +15,31 @@ const agent = process.argv.includes("--agent") ? process.argv[process.argv.index
 const smoke = process.argv.includes("--smoke");
 // --regrade scores the saved output in evals/results/raw again, without new agent runs.
 const regrade = process.argv.includes("--regrade");
+const missing = process.argv.includes("--missing");
 const flag = (name, fallback) => (process.argv.includes(name) ? Number(process.argv[process.argv.indexOf(name) + 1]) : fallback);
 const RUNS = flag("--runs", 1);
 const CONCURRENCY = flag("--concurrency", 4);
+
+// User-level config (~/.claude/CLAUDE.md, skills, plugins) would leak into the "without" runs.
+// So Claude Code runs with an empty config folder that holds only the login. The folder is deleted at exit.
+const env = { ...process.env };
+if (agent === "claude" && !smoke && !regrade) {
+  const config = mkdtempSync(join(tmpdir(), "lean-eval-config-"));
+  const login = join(homedir(), ".claude", ".credentials.json");
+  if (existsSync(login)) cpSync(login, join(config, ".credentials.json"));
+  env.CLAUDE_CONFIG_DIR = config;
+  // Claude Code reads the user memory file from the real home folder, whatever the config folder.
+  // Move it aside for the run, and always put it back.
+  const memory = join(homedir(), ".claude", "CLAUDE.md");
+  const parked = `${memory}.eval-parked`;
+  if (existsSync(parked)) throw new Error(`${parked} exists. Rename it back to CLAUDE.md, then run again.`);
+  if (existsSync(memory)) renameSync(memory, parked);
+  process.on("exit", () => {
+    if (existsSync(parked)) renameSync(parked, memory);
+    rmSync(config, { recursive: true, force: true });
+  });
+  process.on("SIGINT", () => process.exit(130));
+}
 
 const tasks = readdirSync("evals/tasks").filter((f) => f.endsWith(".json")).map((f) => {
   const task = JSON.parse(read(join("evals/tasks", f)));
@@ -58,7 +80,7 @@ const rawPath = (task, without, r) => `evals/results/raw/${agent}/${task.id}-${w
 function runAgent(dir, prompt) {
   const [cmd, args] = AGENTS[agent];
   return new Promise((resolve) => {
-    const child = spawn(cmd, args, { cwd: dir, shell: process.platform === "win32" });
+    const child = spawn(cmd, args, { cwd: dir, env, shell: process.platform === "win32" });
     let out = "";
     const timer = setTimeout(() => child.kill(), 300000);
     child.stdout.on("data", (d) => (out += d));
@@ -70,6 +92,11 @@ function runAgent(dir, prompt) {
 
 async function run(task, without, r) {
   if (regrade) return grade(task, read(rawPath(task, without, r)));
+  // --missing reuses each saved valid run and runs the agent only for the rest.
+  if (missing && existsSync(rawPath(task, without, r))) {
+    const saved = grade(task, read(rawPath(task, without, r)));
+    if (saved !== null) return saved;
+  }
   const dir = workspace(task.skill, without);
   const out = await runAgent(dir, task.prompt);
   rmSync(dir, { recursive: true, force: true });
