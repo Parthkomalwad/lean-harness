@@ -58,7 +58,14 @@ just test
 apm install Parthkomalwad/lean-harness#v0.1.0
 ```
 
-This installs the `ui-taste` skill and the four pinned upstream skills, for Claude Code, Codex or any other APM target. Copy `AGENTS.md` for the rules. To add your own skills, plugins or MCP servers, see [docs/extending.md](docs/extending.md).
+This installs the `ui-taste` skill and the four pinned upstream skills, for Claude Code, Codex or any other APM target. Copy `AGENTS.md` for the rules.
+
+Only want the UI skill, as a native Claude Code plugin?
+
+```text
+/plugin marketplace add Parthkomalwad/lean-harness
+/plugin install ui-taste@lean-harness
+``` To add your own skills, plugins or MCP servers, see [docs/extending.md](docs/extending.md).
 
 ### Open it in Herdr
 
@@ -77,7 +84,7 @@ This starts Claude Code and Codex side by side in one Herdr workspace. Run `herd
 | [`apm.yml`](apm.yml) | Upstream skills, pinned to a commit. |
 | [`.apm/skills/ui-taste`](.apm/skills/ui-taste/SKILL.md) | The one local skill: my UI rules. |
 | [`justfile`](justfile) | `deploy`, `test`, `release`, `eval`, `budget`, `herdr`. |
-| [`evals/`](evals/) | Ten tasks, run with and without each piece. |
+| [`evals/`](evals/) | 20 tasks, run with and without each piece. |
 | [`docs/adr/`](docs/adr/) | Decisions. Memory that any agent can read. |
 
 ## Supported agents
@@ -89,19 +96,23 @@ APM deploys to the targets in `apm.yml`: `claude` (Claude Code) and `codex` (Cod
 `just eval` runs each task in a clean folder twice: with the piece under test, and without it. A task passes when the output matches its checks.
 
 <!-- eval:start -->
-Claude Code, one run per task, 2026-10-23:
+Claude Code, 3 runs per task, 2026-10-23:
 
 | Piece | With | Without | Gain |
 |---|---|---|---|
-| `AGENTS.md` | 5/5 | 4/5 | +1 |
-| `ui-taste` skill | 5/5 | 4/5 | +1 |
+| `AGENTS.md` | 29/30 (97%) | 26/30 (87%) | +10 points |
+| `ui-taste` skill | 15/15 (100%) | 12/15 (80%) | +20 points |
 
-What made the difference:
+What made the difference, in 3 of 3 runs each:
 
-- Without `AGENTS.md`, the commit message got a `Co-Authored-By` trailer for the AI. With it, no trailer.
+- Without `AGENTS.md`, the commit message got a `Co-Authored-By` trailer for the AI.
 - Without `ui-taste`, the page review missed the "too many competing actions" problem.
 
-Most tasks pass both ways. That is the point of this repo: a current model already does most things well, so the harness holds only the small delta. Ten tasks and one run are a small sample. Add real tasks to `evals/tasks/` to make it stronger.
+The model already did the rest without help: it kept `.env` out of the commit, skipped a needless abstraction and avoided a new dependency.
+
+Most tasks pass both ways. That is the point of this repo: a current model already does most things well, so the harness holds only the small delta. The 2026 [ETH Zurich study](https://arxiv.org/abs/2602.11988) found the same: context files help most when they hold non-standard practices.
+
+Five newer tasks (16 to 20) hit a usage limit and show "n/a" in the full table. They do not count in the summary.
 <!-- eval:end -->
 
 Full table: [evals/results/claude.md](evals/results/claude.md).

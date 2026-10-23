@@ -1,0 +1,20 @@
+{
+  "name": "lean-harness",
+  "interface": {
+    "displayName": "lean-harness"
+  },
+  "plugins": [
+    {
+      "name": "ui-taste",
+      "source": {
+        "source": "local",
+        "path": "./.apm/skills/ui-taste"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

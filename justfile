@@ -25,9 +25,9 @@ test:
 release *args:
     node scripts/release.mjs {{args}}
 
-# Run the eval suite with one agent: claude or codex
-eval agent="claude":
-    node scripts/eval.mjs --agent {{agent}}
+# Run the eval suite: agent is claude or codex, runs per task
+eval agent="claude" runs="3":
+    node scripts/eval.mjs --agent {{agent}} --runs {{runs}}
 
 # Show always-loaded tokens. Pass the old harness path to compare.
 budget old="":

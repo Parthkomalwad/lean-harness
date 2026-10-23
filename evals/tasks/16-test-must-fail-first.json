@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "I wrote a test for my bug fix and it passes. What must I check before I trust the test? One short paragraph.",
+  "must": [
+    "(?i)(fails? without|revert|stash|before the fix|without the (fix|change)|undo the fix|remove the fix)"
+  ],
+  "must_not": []
+}

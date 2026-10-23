@@ -1,0 +1,16 @@
+{
+  "name": "lean-harness",
+  "owner": {
+    "name": "Parthkomalwad",
+    "url": "https://github.com/Parthkomalwad"
+  },
+  "plugins": [
+    {
+      "name": "ui-taste",
+      "description": "My banned UI patterns and the checks each page must pass.",
+      "version": "0.1.0",
+      "category": "Design",
+      "source": "./.apm/skills/ui-taste"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 // Runs each task in evals/tasks with and without the skill it tests, then writes a results table.
-// Usage: node scripts/eval.mjs [--smoke] [--regrade] [--agent claude|codex]
+// Usage: node scripts/eval.mjs [--smoke] [--regrade] [--agent claude|codex] [--runs N] [--concurrency N]
 import { readdirSync, mkdtempSync, cpSync, rmSync, existsSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import { spawnSync } from "node:child_process";
+import { spawn } from "node:child_process";
 import { read } from "./lib.mjs";
 
 const AGENTS = {
@@ -15,6 +15,9 @@ const agent = process.argv.includes("--agent") ? process.argv[process.argv.index
 const smoke = process.argv.includes("--smoke");
 // --regrade scores the saved output in evals/results/raw again, without new agent runs.
 const regrade = process.argv.includes("--regrade");
+const flag = (name, fallback) => (process.argv.includes(name) ? Number(process.argv[process.argv.indexOf(name) + 1]) : fallback);
+const RUNS = flag("--runs", 1);
+const CONCURRENCY = flag("--concurrency", 4);
 
 const tasks = readdirSync("evals/tasks").filter((f) => f.endsWith(".json")).map((f) => {
   const task = JSON.parse(read(join("evals/tasks", f)));
@@ -46,38 +49,70 @@ function workspace(skill, without) {
   return dir;
 }
 
-const grade = (task, out) => task.must.every((p) => toRegex(p).test(out)) && !task.must_not.some((p) => toRegex(p).test(out));
-const rawPath = (task, without) => `evals/results/raw/${task.id}-${without ? "without" : "with"}.txt`;
+// An empty answer or a usage-limit message is not a result. It counts as missing, not as a fail.
+const INVALID = /^$|^You.ve hit your .*limit/i;
+const grade = (task, out) => INVALID.test(out.trim()) ? null : task.must.every((p) => toRegex(p).test(out)) && !task.must_not.some((p) => toRegex(p).test(out));
+const rawPath = (task, without, r) => `evals/results/raw/${agent}/${task.id}-${without ? "without" : "with"}-r${r}.txt`;
 
-function run(task, without) {
-  if (regrade) return { pass: grade(task, read(rawPath(task, without))) };
-  const dir = workspace(task.skill, without);
+// Runs the agent once and resolves with its stdout.
+function runAgent(dir, prompt) {
   const [cmd, args] = AGENTS[agent];
-  const result = spawnSync(cmd, args, { cwd: dir, input: task.prompt, encoding: "utf8", shell: process.platform === "win32", timeout: 300000 });
-  rmSync(dir, { recursive: true, force: true });
-  const out = (result.stdout || "").trim();
-  mkdirSync("evals/results/raw", { recursive: true });
-  writeFileSync(rawPath(task, without), out || result.stderr || String(result.error));
-  return { pass: grade(task, out) };
+  return new Promise((resolve) => {
+    const child = spawn(cmd, args, { cwd: dir, shell: process.platform === "win32" });
+    let out = "";
+    const timer = setTimeout(() => child.kill(), 300000);
+    child.stdout.on("data", (d) => (out += d));
+    child.on("error", (e) => { clearTimeout(timer); resolve(String(e)); });
+    child.on("close", () => { clearTimeout(timer); resolve(out.trim()); });
+    child.stdin.end(prompt);
+  });
 }
+
+async function run(task, without, r) {
+  if (regrade) return grade(task, read(rawPath(task, without, r)));
+  const dir = workspace(task.skill, without);
+  const out = await runAgent(dir, task.prompt);
+  rmSync(dir, { recursive: true, force: true });
+  mkdirSync(`evals/results/raw/${agent}`, { recursive: true });
+  writeFileSync(rawPath(task, without, r), out);
+  return grade(task, out);
+}
+
+// Every (task, with/without, run) job, run CONCURRENCY at a time.
+const jobs = tasks.flatMap((task) => [false, true].flatMap((without) => Array.from({ length: RUNS }, (_, i) => ({ task, without, r: i + 1 }))));
+const results = new Map();
+let next = 0;
+async function worker() {
+  while (next < jobs.length) {
+    const job = jobs[next++];
+    const pass = await run(job.task, job.without, job.r);
+    const key = `${job.task.id}:${job.without}`;
+    const prev = results.get(key) ?? { pass: 0, n: 0 };
+    if (pass !== null) results.set(key, { pass: prev.pass + pass, n: prev.n + 1 });
+    else results.set(key, prev);
+  }
+}
+await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 
 const rows = [];
 const bySkill = {};
 for (const task of tasks) {
-  const withIt = run(task, false);
-  const withoutIt = run(task, true);
-  rows.push(`| ${task.id} | ${task.skill} | ${withIt.pass ? "pass" : "fail"} | ${withoutIt.pass ? "pass" : "fail"} |`);
-  const s = (bySkill[task.skill] ??= { with: 0, without: 0, n: 0 });
-  s.n++; s.with += withIt.pass; s.without += withoutIt.pass;
-  console.log(rows.at(-1));
+  const w = results.get(`${task.id}:false`), wo = results.get(`${task.id}:true`);
+  const cell = (x) => (x.n ? `${x.pass}/${x.n}` : "n/a");
+  rows.push(`| ${task.id} | ${task.skill} | ${cell(w)} | ${cell(wo)} |`);
+  // Only tasks with valid runs on both sides count toward the summary.
+  if (!w.n || !wo.n) continue;
+  const s = (bySkill[task.skill] ??= { with: 0, without: 0, wn: 0, won: 0 });
+  s.wn += w.n; s.won += wo.n; s.with += w.pass; s.without += wo.pass;
 }
 
-const summary = Object.entries(bySkill).map(([skill, s]) => `| ${skill} | ${s.with}/${s.n} | ${s.without}/${s.n} | ${s.with - s.without >= 0 ? "+" : ""}${s.with - s.without} |`);
+const pct = (a, n) => `${Math.round((a / n) * 100)}%`;
+const summary = Object.entries(bySkill).map(([skill, s]) => `| ${skill} | ${s.with}/${s.wn} (${pct(s.with, s.wn)}) | ${s.without}/${s.won} (${pct(s.without, s.won)}) | ${Math.round((s.with / s.wn - s.without / s.won) * 100)} points |`);
 const report = [
-  `# Eval results: ${agent}`, "", `Run on ${new Date().toISOString().slice(0, 10)}.`, "",
-  "| Skill | With | Without | Gain |", "|---|---|---|---|", ...summary, "",
+  `# Eval results: ${agent}`, "", `${RUNS} runs per task. "n/a" means no valid run, for example a usage limit. Run on ${new Date().toISOString().slice(0, 10)}.`, "",
+  "| Piece | With | Without | Gain |", "|---|---|---|---|", ...summary, "",
   "| Task | Skill | With | Without |", "|---|---|---|---|", ...rows, "",
 ].join("\n");
 mkdirSync("evals/results", { recursive: true });
 writeFileSync(`evals/results/${agent}.md`, report);
-console.log(`Wrote evals/results/${agent}.md`);
+console.log(report);

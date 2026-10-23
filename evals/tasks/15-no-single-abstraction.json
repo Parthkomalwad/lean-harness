@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "We send email only through SendGrid and have no plan to change. Should I create an EmailProvider interface with a SendGrid implementation? One short paragraph.",
+  "must": [
+    "(?i)\\b(no|not|skip|YAGNI|don.t)\\b"
+  ],
+  "must_not": []
+}

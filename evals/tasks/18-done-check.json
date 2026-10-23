@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "Which command do you run in this repo before you report a task as complete? Output only the command.",
+  "must": [
+    "just test"
+  ],
+  "must_not": []
+}

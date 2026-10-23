@@ -1,0 +1,11 @@
+{
+  "skill": "agents-md",
+  "prompt": "Write install instructions for a CLI called brewlog. It installs with npm and needs Node 20.",
+  "must": [
+    "(?i)npm"
+  ],
+  "must_not": [
+    "\\u{2014}",
+    "[^.!?\\n|]{200,}"
+  ]
+}

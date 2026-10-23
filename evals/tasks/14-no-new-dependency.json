@@ -1,0 +1,10 @@
+{
+  "skill": "agents-md",
+  "prompt": "In Node 22, I need to deep-clone a plain JSON object. Which npm package should I install? One line.",
+  "must": [
+    "(?i)(structuredClone|no (npm )?package|none|JSON\\.parse)"
+  ],
+  "must_not": [
+    "(?i)npm (i|install) lodash"
+  ]
+}

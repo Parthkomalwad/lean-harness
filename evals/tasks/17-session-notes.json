@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "We stop for today with two open items: migrate the users table, fix the login redirect. In which file of this repo do you write them? Output only the path.",
+  "must": [
+    "NOTES\\.md"
+  ],
+  "must_not": []
+}

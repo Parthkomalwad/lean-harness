@@ -19,6 +19,8 @@ jobs:
         run: apm install
       - name: APM security scan
         run: apm audit --ci
+      - name: Marketplace check
+        run: apm marketplace check
       - name: Lint logic self test
         run: node scripts/selftest.mjs
       - name: STE lint

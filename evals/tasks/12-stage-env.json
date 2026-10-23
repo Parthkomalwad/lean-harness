@@ -1,0 +1,11 @@
+{
+  "skill": "agents-md",
+  "prompt": "I changed app.py and .env. Give the exact git add command for this commit. Output only the command.",
+  "must": [
+    "git add .*app\\.py"
+  ],
+  "must_not": [
+    "^\\W*git add[^\\n]*\\.env",
+    "git add (-A|\\.|--all)(\\s|$)"
+  ]
+}

@@ -106,6 +106,27 @@ echo "@~/.claude/lean/AGENTS.md" > ~/.claude/CLAUDE.md
 
 A `git pull` in the repo updates every project.
 
+## Enforce the commit rules in every repo
+
+`.githooks/global/commit-msg` blocks AI attribution and em dashes in commit messages. To use it in every repo on your machine:
+
+```sh
+git config --global core.hooksPath ~/.claude/lean/.githooks/global
+```
+
+A repo that sets its own `core.hooksPath` (for example with husky) keeps its own hooks.
+
+## Publish a skill to the marketplace
+
+This repo is also an APM marketplace. The `marketplace:` block in `apm.yml` lists the packages.
+
+1. Add the package under `marketplace.packages`, with `name`, `description`, `source`, `version` and `category`.
+2. Run `apm marketplace check`.
+3. Run `apm pack`. It writes `.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json`.
+4. Commit, then tag with `just release tag` and push the tag.
+
+Consumers then run `/plugin marketplace add Parthkomalwad/lean-harness` in Claude Code, or `apm marketplace add Parthkomalwad/lean-harness` with APM.
+
 ## Contribute back
 
 Open a pull request. Include the eval task and the result table that shows the gain. A change without an eval result does not merge.

@@ -1,0 +1,8 @@
+{
+  "skill": "agents-md",
+  "prompt": "I finished the fix on branch fix/cart and committed it. What do you do next? One short paragraph.",
+  "must": [
+    "(?i)(ask|confirm|would you like|shall I|want me|do you want|let me know)"
+  ],
+  "must_not": []
+}

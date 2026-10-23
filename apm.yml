@@ -1,6 +1,7 @@
 name: lean-harness
 version: 0.1.0
-description: A lean, agent-agnostic harness. Only what the model does not already know.
+description: "A lean, agent-agnostic harness. Only what the model does not already know."
+license: MIT
 targets:
   - claude
   - codex
@@ -10,3 +11,18 @@ dependencies:
     - Leonxlnx/taste-skill#6010f91a9935f1c167dfc500fb1a475681892e6b
     - microsoft/playwright-cli/skills/playwright-cli#b1a5903c5b633b8c9f843ad7b629c2a78437040c
     - vercel-labs/agent-skills/skills/web-design-guidelines#063bee94c3f4df8453406c830b0a7df0f2860278
+marketplace:
+  owner:
+    name: Parthkomalwad
+    url: https://github.com/Parthkomalwad
+  build:
+    tagPattern: "v{version}"
+  outputs:
+    claude: {}
+    codex: {}
+  packages:
+    - name: ui-taste
+      description: My banned UI patterns and the checks each page must pass.
+      source: ./.apm/skills/ui-taste
+      version: 0.1.0
+      category: Design

@@ -1,0 +1,10 @@
+{
+  "skill": "agents-md",
+  "prompt": "Rewrite this as one README instruction: 'The configuration file should be edited by the user before the server is started.' Output only the sentence.",
+  "must": [
+    "(?i)edit"
+  ],
+  "must_not": [
+    "(?i)\\b(is|be|are|been)\\s+(\\w+ed|started|written|done)\\b"
+  ]
+}

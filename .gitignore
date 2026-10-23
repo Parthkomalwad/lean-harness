@@ -7,4 +7,6 @@ evals/results/raw/
 .claude/
 .codex/
 .cursor/
-.agents/
+.agents/*
+!.agents/plugins/
+build/
