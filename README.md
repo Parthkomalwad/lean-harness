@@ -56,7 +56,7 @@ irm https://aka.ms/apm-windows | iex        # Windows PowerShell
 Then, in your project:
 
 ```sh
-apm install Parthkomalwad/lean-harness#v0.1.0
+apm install Parthkomalwad/lean-harness#v0.2.0
 ```
 
 This deploys the `ui-taste` skill and the four pinned upstream skills to Claude Code, Codex or any other [APM target](https://microsoft.github.io/apm/reference/targets-matrix/). For the rules, copy [`AGENTS.md`](AGENTS.md) into your project and edit it. Add a `CLAUDE.md` with one line: `@AGENTS.md`.
@@ -103,12 +103,29 @@ This starts Claude Code and Codex side by side in one Herdr workspace. Run `herd
 | [`apm.yml`](apm.yml) | Upstream skills, pinned to a commit. |
 | [`.apm/skills/ui-taste`](.apm/skills/ui-taste/SKILL.md) | The one local skill: my UI rules. |
 | [`justfile`](justfile) | `deploy`, `test`, `release`, `eval`, `budget`, `herdr`. |
+| [`scripts/`](scripts/) | The code behind the recipes: token budget, STE lint, eval runner, release notes. |
+| [`.githooks/`](.githooks/) | Pre-commit checks. `global/commit-msg` blocks AI attribution and em dashes in any repo. |
+| [`herdr/`](herdr/) | Scripts that open agents side by side and run the council. |
 | [`evals/`](evals/) | 20 tasks, run with and without each piece. |
 | [`docs/adr/`](docs/adr/) | Decisions. Memory that any agent can read. |
+| [`docs/extending.md`](docs/extending.md) | How to add skills, plugins, MCP servers and rules. |
+
+### Upstream skills
+
+`apm install` also brings in these skills, each pinned to one commit. Credit goes to their authors.
+
+| Skill | Source | Use |
+|---|---|---|
+| superpowers | [obra/superpowers](https://github.com/obra/superpowers) | Planning, TDD, debugging and review workflows |
+| taste-skill | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | Art direction for web pages |
+| playwright-cli | [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | Browser automation and screenshots |
+| web-design-guidelines | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | UI review against web interface guidelines |
 
 ## Supported agents
 
 APM deploys to the targets in `apm.yml`: `claude` (Claude Code) and `codex` (Codex). APM supports more targets, for example `copilot`, `gemini`, `opencode`, `windsurf` and `kiro`. See the [APM targets matrix](https://microsoft.github.io/apm/reference/targets-matrix/). The `cursor` target is off for now: the superpowers hooks clash with it. [ADR-0001](docs/adr/0001-why-lean.md) has the details.
+
+The eval results below are for Claude Code. APM deploys the same files for Codex, but the Codex eval has not run yet. Run `just eval codex` to add it.
 
 ## Eval results
 
@@ -145,6 +162,15 @@ Full table: [evals/results/claude.md](evals/results/claude.md).
 - [Writing style: ASD-STE-100](docs/style-ste.md)
 - [Extending: add skills, plugins and MCP servers](docs/extending.md)
 - [Evaluating AGENTS.md](https://arxiv.org/abs/2602.11988) (ETH Zurich, 2026): context files help most when they hold non-standard practices. This repo applies that finding.
+
+## Contributing
+
+Issues and pull requests are welcome. A new skill or rule needs an eval task that shows a gain. See [docs/extending.md](docs/extending.md#contribute-back).
+
+## Security
+
+- Upstream skills and hooks run on your machine. Read them before you install.
+- APM pins each dependency to a commit. `apm audit` scans every install for hidden Unicode and drift, and CI runs it on each push.
 
 ## Notes
 

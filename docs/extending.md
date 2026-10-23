@@ -77,7 +77,7 @@ The script runs each task twice: with the piece, and without it. It writes the t
 Get the skills and the upstream dependencies:
 
 ```sh
-apm install Parthkomalwad/lean-harness#v0.1.0
+apm install Parthkomalwad/lean-harness#v0.2.0
 ```
 
 Get the rules: copy `AGENTS.md` into your project, then edit it. Add a `CLAUDE.md` with one line: `@AGENTS.md`.
