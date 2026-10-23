@@ -42,30 +42,49 @@ Always-loaded text, measured by `just budget`: **1,782 tokens** in v1 with all p
 
 ## Install
 
-You need [APM](https://microsoft.github.io/apm/getting-started/installation/), [just](https://github.com/casey/just) and Node.js 20 or later. [Herdr](https://herdr.dev/docs/install/) is optional.
+Pick the way that fits you.
+
+### 1. Add it to your project (any agent)
+
+Install [APM](https://microsoft.github.io/apm/getting-started/installation/) once:
 
 ```sh
-git clone https://github.com/Parthkomalwad/lean-harness
-cd lean-harness
-apm install      # deploys skills to .claude/ and .agents/
-just setup       # turns on the pre-commit hook
-just test
+curl -sSL https://aka.ms/apm-unix | sh      # Linux and macOS
+irm https://aka.ms/apm-windows | iex        # Windows PowerShell
 ```
 
-### Use it in your own project
+Then, in your project:
 
 ```sh
 apm install Parthkomalwad/lean-harness#v0.1.0
 ```
 
-This installs the `ui-taste` skill and the four pinned upstream skills, for Claude Code, Codex or any other APM target. Copy `AGENTS.md` for the rules.
+This deploys the `ui-taste` skill and the four pinned upstream skills to Claude Code, Codex or any other [APM target](https://microsoft.github.io/apm/reference/targets-matrix/). For the rules, copy [`AGENTS.md`](AGENTS.md) into your project and edit it. Add a `CLAUDE.md` with one line: `@AGENTS.md`.
 
-Only want the UI skill, as a native Claude Code plugin?
+### 2. Only the UI skill, as a Claude Code plugin
 
 ```text
 /plugin marketplace add Parthkomalwad/lean-harness
 /plugin install ui-taste@lean-harness
-``` To add your own skills, plugins or MCP servers, see [docs/extending.md](docs/extending.md).
+```
+
+### 3. Use it in every project on your machine
+
+Clone the repo, then load its `AGENTS.md` from your user-level `~/.claude/CLAUDE.md`. The steps for Windows, Linux and macOS are in [docs/extending.md](docs/extending.md#use-it-in-every-project-claude-code).
+
+### 4. Fork it and make it yours
+
+You need APM, [just](https://github.com/casey/just) and Node.js 20 or later. [Herdr](https://herdr.dev/docs/install/) is optional.
+
+```sh
+git clone https://github.com/<your-name>/lean-harness
+cd lean-harness
+apm install      # deploys skills to .claude/ and .agents/
+just setup       # turns on the git hooks
+just test
+```
+
+Edit `AGENTS.md` with your own rules. To add skills, plugins or MCP servers, see [docs/extending.md](docs/extending.md).
 
 ### Open it in Herdr
 
