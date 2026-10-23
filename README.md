@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="docs/assets/hero-light.svg">
-  <img src="docs/assets/hero-dark.svg" alt="On the left, the 25 packs of agentic-harness v1, dimmed. An arrow points to five layers of lean-harness v2: AGENTS.md, apm.yml, herdr, justfile and CI, evals. Always-loaded text drops from 1,782 to 454 tokens." width="900">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/transition-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/transition-light.svg">
+  <img src="docs/assets/transition-dark.svg" alt="The 25 packs of agentic-harness v1 flow into five fates: 11 removed because the model already knows them, 4 declared as pinned upstream dependencies, 4 scripted, 4 moved to runtime, 2 kept. They land in the five layers of lean-harness v2: AGENTS.md and ui-taste, apm.yml, justfile with hooks and CI, herdr, and evals. Always-loaded tokens drop from 1,782 to 454. AGENTS.md adds 13 points and ui-taste 27 points on 20 tasks." width="100%">
 </picture>
 
 <br>

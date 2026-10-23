@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+<rect width="1200" height="675" rx="20" fill="#1F1E1D"/>
+<text x="48" y="64" font-size="28" font-weight="700" fill="#F0EEE6">From agentic-harness to lean-harness</text>
+<text x="48" y="94" font-size="16" fill="#9C9890">Keep only what the model does not already know. Move the rest to the right layer. Measure it.</text>
+<text x="48" y="140" font-size="13" font-weight="600" letter-spacing="1.5" fill="#9C9890">V1  ·  25 PACKS, CLAUDE CODE ONLY</text>
+<text x="470" y="140" font-size="13" font-weight="600" letter-spacing="1.5" fill="#9C9890">WHAT HAPPENED TO EACH PACK</text>
+<text x="836" y="140" font-size="13" font-weight="600" letter-spacing="1.5" fill="#D97757">V2  ·  5 LAYERS, AGENT-AGNOSTIC</text>
+<path d="M436 186 C453 186, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 186 C453 186, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 186 C453 186, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 186 C453 186, 453 372, 470 372" fill="none" stroke="#B48BDB" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 186 C453 186, 453 432, 470 432" fill="none" stroke="#D97757" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 244 C453 244, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 244 C453 244, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 244 C453 244, 453 372, 470 372" fill="none" stroke="#B48BDB" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 244 C453 244, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 244 C453 244, 453 372, 470 372" fill="none" stroke="#B48BDB" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 302 C453 302, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 302 C453 302, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 302 C453 302, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 302 C453 302, 453 312, 470 312" fill="none" stroke="#4FB08F" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 302 C453 302, 453 312, 470 312" fill="none" stroke="#4FB08F" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 360 C453 360, 453 312, 470 312" fill="none" stroke="#4FB08F" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 360 C453 360, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M436 360 C453 360, 453 312, 470 312" fill="none" stroke="#4FB08F" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 360 C453 360, 453 432, 470 432" fill="none" stroke="#D97757" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 360 C453 360, 453 252, 470 252" fill="none" stroke="#6C9BEF" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 418 C453 418, 453 252, 470 252" fill="none" stroke="#6C9BEF" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 418 C453 418, 453 252, 470 252" fill="none" stroke="#6C9BEF" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 418 C453 418, 453 252, 470 252" fill="none" stroke="#6C9BEF" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 418 C453 418, 453 372, 470 372" fill="none" stroke="#B48BDB" stroke-width="1.4" opacity="0.55"/>
+<path d="M436 418 C453 418, 453 192, 470 192" fill="none" stroke="#6E6A64" stroke-width="1.4" opacity="0.35" stroke-dasharray="3 4"/>
+<path d="M770 252 C803 252, 803 252, 836 252" fill="none" stroke="#6C9BEF" stroke-width="2.5" opacity="0.8"/>
+<path d="M770 312 C803 312, 803 312, 836 312" fill="none" stroke="#4FB08F" stroke-width="2.5" opacity="0.8"/>
+<path d="M770 372 C803 372, 803 372, 836 372" fill="none" stroke="#B48BDB" stroke-width="2.5" opacity="0.8"/>
+<path d="M770 432 C803 432, 803 192, 836 192" fill="none" stroke="#D97757" stroke-width="2.5" opacity="0.8"/>
+<rect x="48" y="160" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="58" cy="170" r="3.5" fill="#6E6A64"/>
+<text x="84" y="194" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">core</text>
+<rect x="126" y="160" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="136" cy="170" r="3.5" fill="#6E6A64"/>
+<text x="162" y="194" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">harness-ba.</text>
+<rect x="204" y="160" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="214" cy="170" r="3.5" fill="#6E6A64"/>
+<text x="240" y="194" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">system-one</text>
+<rect x="282" y="160" width="72" height="52" rx="8" fill="#262523" stroke="#B48BDB" stroke-width="1.5"/>
+<circle cx="292" cy="170" r="3.5" fill="#B48BDB"/>
+<text x="318" y="194" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">memory-pack</text>
+<rect x="360" y="160" width="72" height="52" rx="8" fill="#262523" stroke="#D97757" stroke-width="1.5"/>
+<circle cx="370" cy="170" r="3.5" fill="#D97757"/>
+<text x="396" y="194" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">ui-pack</text>
+<rect x="48" y="218" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="58" cy="228" r="3.5" fill="#6E6A64"/>
+<text x="84" y="252" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">motion-pack</text>
+<rect x="126" y="218" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="136" cy="228" r="3.5" fill="#6E6A64"/>
+<text x="162" y="252" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">docs-pack</text>
+<rect x="204" y="218" width="72" height="52" rx="8" fill="#262523" stroke="#B48BDB" stroke-width="1.5"/>
+<circle cx="214" cy="228" r="3.5" fill="#B48BDB"/>
+<text x="240" y="252" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">orchestrat.</text>
+<rect x="282" y="218" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="292" cy="228" r="3.5" fill="#6E6A64"/>
+<text x="318" y="252" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">db-pack</text>
+<rect x="360" y="218" width="72" height="52" rx="8" fill="#262523" stroke="#B48BDB" stroke-width="1.5"/>
+<circle cx="370" cy="228" r="3.5" fill="#B48BDB"/>
+<text x="396" y="252" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">council-pa.</text>
+<rect x="48" y="276" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="58" cy="286" r="3.5" fill="#6E6A64"/>
+<text x="84" y="310" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">architect</text>
+<rect x="126" y="276" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="136" cy="286" r="3.5" fill="#6E6A64"/>
+<text x="162" y="310" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">glassbox</text>
+<rect x="204" y="276" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="214" cy="286" r="3.5" fill="#6E6A64"/>
+<text x="240" y="310" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">research</text>
+<rect x="282" y="276" width="72" height="52" rx="8" fill="#262523" stroke="#4FB08F" stroke-width="1.5"/>
+<circle cx="292" cy="286" r="3.5" fill="#4FB08F"/>
+<text x="318" y="310" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">deploy-pack</text>
+<rect x="360" y="276" width="72" height="52" rx="8" fill="#262523" stroke="#4FB08F" stroke-width="1.5"/>
+<circle cx="370" cy="286" r="3.5" fill="#4FB08F"/>
+<text x="396" y="310" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">test-pack</text>
+<rect x="48" y="334" width="72" height="52" rx="8" fill="#262523" stroke="#4FB08F" stroke-width="1.5"/>
+<circle cx="58" cy="344" r="3.5" fill="#4FB08F"/>
+<text x="84" y="368" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">security</text>
+<rect x="126" y="334" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="136" cy="344" r="3.5" fill="#6E6A64"/>
+<text x="162" y="368" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">observabil.</text>
+<rect x="204" y="334" width="72" height="52" rx="8" fill="#262523" stroke="#4FB08F" stroke-width="1.5"/>
+<circle cx="214" cy="344" r="3.5" fill="#4FB08F"/>
+<text x="240" y="368" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">ship-pack</text>
+<rect x="282" y="334" width="72" height="52" rx="8" fill="#262523" stroke="#D97757" stroke-width="1.5"/>
+<circle cx="292" cy="344" r="3.5" fill="#D97757"/>
+<text x="318" y="368" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">launch-pack</text>
+<rect x="360" y="334" width="72" height="52" rx="8" fill="#262523" stroke="#6C9BEF" stroke-width="1.5"/>
+<circle cx="370" cy="344" r="3.5" fill="#6C9BEF"/>
+<text x="396" y="368" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">superpowers</text>
+<rect x="48" y="392" width="72" height="52" rx="8" fill="#262523" stroke="#6C9BEF" stroke-width="1.5"/>
+<circle cx="58" cy="402" r="3.5" fill="#6C9BEF"/>
+<text x="84" y="426" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">taste-skill</text>
+<rect x="126" y="392" width="72" height="52" rx="8" fill="#262523" stroke="#6C9BEF" stroke-width="1.5"/>
+<circle cx="136" cy="402" r="3.5" fill="#6C9BEF"/>
+<text x="162" y="426" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">playwright</text>
+<rect x="204" y="392" width="72" height="52" rx="8" fill="#262523" stroke="#6C9BEF" stroke-width="1.5"/>
+<circle cx="214" cy="402" r="3.5" fill="#6C9BEF"/>
+<text x="240" y="426" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">web-design</text>
+<rect x="282" y="392" width="72" height="52" rx="8" fill="#262523" stroke="#B48BDB" stroke-width="1.5"/>
+<circle cx="292" cy="402" r="3.5" fill="#B48BDB"/>
+<text x="318" y="426" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">session-mem</text>
+<rect x="360" y="392" width="72" height="52" rx="8" fill="#262523" stroke="#3D3B38" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="370" cy="402" r="3.5" fill="#6E6A64"/>
+<text x="396" y="426" font-size="10.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5E5B56" text-decoration="line-through">firecrawl</text>
+<rect x="470" y="167" width="300" height="50" rx="10" fill="#262523" stroke="#3D3B38"/>
+<rect x="470" y="167" width="6" height="50" rx="3" fill="#6E6A64"/>
+<text x="492" y="189" font-size="15" font-weight="700" fill="#F0EEE6">Removed</text>
+<text x="492" y="207" font-size="12.5" fill="#9C9890">the model already knows it</text>
+<text x="752" y="199" font-size="22" font-weight="700" text-anchor="end" fill="#6E6A64">11</text>
+<rect x="470" y="227" width="300" height="50" rx="10" fill="#262523" stroke="#3D3B38"/>
+<rect x="470" y="227" width="6" height="50" rx="3" fill="#6C9BEF"/>
+<text x="492" y="249" font-size="15" font-weight="700" fill="#F0EEE6">Declared</text>
+<text x="492" y="267" font-size="12.5" fill="#9C9890">pinned upstream, not copied</text>
+<text x="752" y="259" font-size="22" font-weight="700" text-anchor="end" fill="#6C9BEF">4</text>
+<rect x="470" y="287" width="300" height="50" rx="10" fill="#262523" stroke="#3D3B38"/>
+<rect x="470" y="287" width="6" height="50" rx="3" fill="#4FB08F"/>
+<text x="492" y="309" font-size="15" font-weight="700" fill="#F0EEE6">Scripted</text>
+<text x="492" y="327" font-size="12.5" fill="#9C9890">fixed steps become commands</text>
+<text x="752" y="319" font-size="22" font-weight="700" text-anchor="end" fill="#4FB08F">4</text>
+<rect x="470" y="347" width="300" height="50" rx="10" fill="#262523" stroke="#3D3B38"/>
+<rect x="470" y="347" width="6" height="50" rx="3" fill="#B48BDB"/>
+<text x="492" y="369" font-size="15" font-weight="700" fill="#F0EEE6">Moved to runtime</text>
+<text x="492" y="387" font-size="12.5" fill="#9C9890">sessions, memory, councils</text>
+<text x="752" y="379" font-size="22" font-weight="700" text-anchor="end" fill="#B48BDB">4</text>
+<rect x="470" y="407" width="300" height="50" rx="10" fill="#262523" stroke="#3D3B38"/>
+<rect x="470" y="407" width="6" height="50" rx="3" fill="#D97757"/>
+<text x="492" y="429" font-size="15" font-weight="700" fill="#F0EEE6">Kept</text>
+<text x="492" y="447" font-size="12.5" fill="#9C9890">only my own rules</text>
+<text x="752" y="439" font-size="22" font-weight="700" text-anchor="end" fill="#D97757">2</text>
+<rect x="836" y="167" width="316" height="50" rx="10" fill="#262523" stroke="#D97757" stroke-width="1.6"/>
+<text x="854" y="189" font-size="15" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">AGENTS.md + ui-taste</text>
+<text x="854" y="207" font-size="12.5" fill="#9C9890">only the delta</text>
+<rect x="836" y="227" width="316" height="50" rx="10" fill="#262523" stroke="#6C9BEF" stroke-width="1.6"/>
+<text x="854" y="249" font-size="15" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">apm.yml</text>
+<text x="854" y="267" font-size="12.5" fill="#9C9890">deploys to many agents</text>
+<rect x="836" y="287" width="316" height="50" rx="10" fill="#262523" stroke="#4FB08F" stroke-width="1.6"/>
+<text x="854" y="309" font-size="15" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">justfile + hooks + CI</text>
+<text x="854" y="327" font-size="12.5" fill="#9C9890">enforced by code</text>
+<rect x="836" y="347" width="316" height="50" rx="10" fill="#262523" stroke="#B48BDB" stroke-width="1.6"/>
+<text x="854" y="369" font-size="15" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">herdr/</text>
+<text x="854" y="387" font-size="12.5" fill="#9C9890">agents side by side</text>
+<rect x="836" y="407" width="316" height="50" rx="10" fill="#262523" stroke="#F0EEE6" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="854" y="429" font-size="15" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#F0EEE6">evals/</text>
+<text x="854" y="447" font-size="12.5" fill="#9C9890">proof for every piece  (new)</text>
+<line x1="48" y1="500" x2="1152" y2="500" stroke="#3D3B38"/>
+<text x="48" y="566" font-size="32" font-weight="800" fill="#D97757">1,782 → 454</text>
+<text x="48" y="592" font-size="14" fill="#F0EEE6">tokens loaded in every session</text>
+<text x="48" y="612" font-size="12.5" fill="#9C9890">75% less</text>
+<line x1="324" y1="528" x2="324" y2="618" stroke="#3D3B38"/>
+<text x="352" y="566" font-size="32" font-weight="800" fill="#D97757">+13 points</text>
+<text x="352" y="592" font-size="14" fill="#F0EEE6">from AGENTS.md on 20 tasks</text>
+<text x="352" y="612" font-size="12.5" fill="#9C9890">45/45 with, 39/45 without</text>
+<line x1="600" y1="528" x2="600" y2="618" stroke="#3D3B38"/>
+<text x="628" y="566" font-size="32" font-weight="800" fill="#D97757">+27 points</text>
+<text x="628" y="592" font-size="14" fill="#F0EEE6">from the ui-taste skill</text>
+<text x="628" y="612" font-size="12.5" fill="#9C9890">15/15 with, 11/15 without</text>
+<line x1="876" y1="528" x2="876" y2="618" stroke="#3D3B38"/>
+<text x="904" y="566" font-size="32" font-weight="800" fill="#F0EEE6">Most tasks</text>
+<text x="904" y="592" font-size="14" fill="#F0EEE6">passed with no help at all</text>
+<text x="904" y="612" font-size="12.5" fill="#9C9890">the model already knew</text>
+<text x="48" y="647" font-size="12.5" fill="#9C9890">Claude Code, 3 runs per task, isolated config.  github.com/Parthkomalwad/lean-harness</text>
+</svg>
