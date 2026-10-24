@@ -12,6 +12,7 @@ Optimize for a working demo, not for complete code. Write these phases to `.flow
 | Plan | `plan-spec` | the idea, the judging rules | `docs/spec.md` | yes |
 | UI | `ui-taste`, `taste-skill` | spec | main screen works | no |
 | Backend | `stack-pick` | spec | API and data work | no |
+| Review | `review` | the code | findings table | no |
 | Staging | `cheap-deploy` | the app | live URL | yes |
 | Pitch | `ship-docs` | live URL | deck | no |
 | Video | `ship-docs` | live URL | demo video | no |
@@ -21,4 +22,5 @@ Optimize for a working demo, not for complete code. Write these phases to `.flow
 
 - Time-box the plan to 30 minutes.
 - Fake what the demo does not show. Mark each fake with a `TODO(demo)` comment.
+- In the review phase, fix only critical findings and security findings. Put the rest in `NOTES.md`.
 - Deploy early. Deploy again after each phase.

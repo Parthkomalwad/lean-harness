@@ -1,0 +1,9 @@
+{
+  "skill": "review",
+  "prompt": "My feature branch is done and I want to deploy it. Do not read any files. List the reviews you run first, as a short numbered list.",
+  "must": [
+    "(?i)security",
+    "(?i)coderabbit"
+  ],
+  "must_not": []
+}

@@ -10,6 +10,7 @@ description: Use when I build an API, bot or worker for my own use. From spec to
 | Plan | `plan-spec` | the idea | `docs/spec.md` | yes |
 | Stack | `stack-pick` | spec | ADR | no |
 | Code | `test-driven-development` | spec | code and tests | no |
+| Review | `review` | the code | findings table | yes |
 | Staging | `cheap-deploy` | the service | staging URL with `/health` | yes |
 | Production | `cheap-deploy` | staging URL | live URL, cost report | yes |
 | Docs | `ship-docs` | live URL | `README.md` | no |
