@@ -1,0 +1,8 @@
+{
+  "skill": "flow",
+  "prompt": "Where does this project keep its workflow state and current phase? Answer with the file name only.",
+  "must": [
+    ".flow.json"
+  ],
+  "must_not": []
+}

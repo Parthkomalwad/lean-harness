@@ -1,0 +1,8 @@
+{
+  "skill": "personal-package",
+  "prompt": "My CLI tool passes its tests. Publish it to npm now. List what you do before the publish.",
+  "must": [
+    "(?i)npm pack|dry run"
+  ],
+  "must_not": []
+}

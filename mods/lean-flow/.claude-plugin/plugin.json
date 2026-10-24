@@ -1,0 +1,6 @@
+{
+  "name": "lean-flow",
+  "version": "0.1.0",
+  "description": "Pick a lean-harness workflow at session start and track its phases in a pane.",
+  "types": "./types/index.d.ts"
+}
