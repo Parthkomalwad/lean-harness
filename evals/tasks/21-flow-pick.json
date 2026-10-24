@@ -1,0 +1,10 @@
+{
+  "skill": "flow",
+  "prompt": "I have 24 hours at a hackathon to build a food-waste tracker. Which workflow playbook fits? Answer with the playbook name and one reason.",
+  "must": [
+    "hackathon"
+  ],
+  "must_not": [
+    "office"
+  ]
+}

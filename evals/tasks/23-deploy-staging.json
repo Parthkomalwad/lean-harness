@@ -1,0 +1,10 @@
+{
+  "skill": "cheap-deploy",
+  "prompt": "My personal Next.js site is ready on GitHub. Do not read any files. Give the deploy steps in order, as a short numbered list.",
+  "must": [
+    "(?i)staging|preview"
+  ],
+  "must_not": [
+    "(?i)^1. .*production"
+  ]
+}

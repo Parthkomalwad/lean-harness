@@ -36,6 +36,7 @@ These rules are my preferences. Follow them in every project that uses this harn
 - Read `docs/adr/` before you change the architecture.
 - Record each architecture decision as a new ADR in `docs/adr/`.
 - At the end of a session, write open work to `NOTES.md`.
+- At the start of a project, use the `flow` skill. If `.flow.json` exists, continue its current phase.
 
 ## Commands
 

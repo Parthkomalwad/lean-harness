@@ -13,6 +13,8 @@ Each addition goes to one layer. Each addition must show a gain in the eval suit
 | A fixed procedure | `scripts/` and a `justfile` recipe | `just <recipe>` |
 | A rule that must always apply | `.githooks/` or `.github/workflows/` | none |
 | A decision | `docs/adr/NNNN-title.md` | none |
+| A workflow for one kind of project | `.apm/skills/<playbook>/SKILL.md` | `apm install` |
+| A Claude Code UI change | `mods/<name>/` | `claude plugin validate mods/<name>` |
 
 ## Add an upstream skill or plugin
 
@@ -49,6 +51,28 @@ Then run `apm install`. APM writes the server config for each target.
 2. Write one instruction per sentence, in STE style. See `docs/style-ste.md`.
 3. Add an eval task that fails without the rule.
 4. Keep `AGENTS.md` under 60 lines. Move detail to a skill or a doc, and link it.
+
+## Add a workflow playbook
+
+A playbook is a skill with a phase table: phase, skill, in, out, gate. See `.apm/skills/hackathon/SKILL.md` and ADR-0002.
+
+1. Reuse the phase skills: `plan-spec`, `stack-pick`, `cheap-deploy`, `ship-docs`.
+2. Create `.apm/skills/<playbook>/SKILL.md` with the phase table.
+3. Add a row for it in the signal table of `.apm/skills/flow/SKILL.md`.
+4. Add the name to `PLAYBOOKS` in `mods/lean-flow/hooks/register.tsx`.
+5. Run `just test`.
+
+## The lean-flow mod
+
+`mods/lean-flow` shows the flow in Claude Code. It reads `.flow.json` and never writes it.
+
+To load it in every session, add this to `~/.claude/settings.json`:
+
+```json
+{ "env": { "CLAUDE_CODE_PLUGIN_DIRS": "~/.claude/lean/mods/lean-flow" } }
+```
+
+Then link each new skill into `~/.claude/skills`, as in "Use it in every project". Run `/flow` to open the pane, or `/flow hackathon` to start a playbook.
 
 ## Prove it
 
