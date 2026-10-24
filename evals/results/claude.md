@@ -6,9 +6,10 @@
 |---|---|---|---|
 | agents-md | 45/45 (100%) | 39/45 (87%) | 13 points |
 | ui-taste | 15/15 (100%) | 11/15 (73%) | 27 points |
-| flow | 6/6 (100%) | 5/6 (83%) | 17 points |
-| cheap-deploy | 3/3 (100%) | 2/3 (67%) | 33 points |
+| flow | 6/6 (100%) | 6/6 (100%) | 0 points |
+| cheap-deploy | 2/3 (67%) | 3/3 (100%) | -33 points |
 | personal-package | 3/3 (100%) | 3/3 (100%) | 0 points |
+| review | 3/3 (100%) | 0/3 (0%) | 100 points |
 
 | Task | Skill | With | Without |
 |---|---|---|---|
@@ -32,7 +33,8 @@
 | 18-done-check | agents-md | 3/3 | 0/3 |
 | 19-short-sentences | agents-md | 3/3 | 3/3 |
 | 20-root-cause | agents-md | 3/3 | 3/3 |
-| 21-flow-pick | flow | 3/3 | 2/3 |
+| 21-flow-pick | flow | 3/3 | 3/3 |
 | 22-flow-file | flow | 3/3 | 3/3 |
-| 23-deploy-staging | cheap-deploy | 3/3 | 2/3 |
+| 23-deploy-staging | cheap-deploy | 2/3 | 3/3 |
 | 24-package-publish | personal-package | 3/3 | 3/3 |
+| 25-review-before-deploy | review | 3/3 | 0/3 |

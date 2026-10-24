@@ -14,7 +14,7 @@ Follow the rules of the repo first. These phases fill the gaps.
 | Ticket | none | ticket ID and text | acceptance criteria in `NOTES.md` | yes |
 | Design | `plan-spec` | criteria | ADR if the change affects architecture | yes |
 | Code | `test-driven-development` | criteria | code and tests | no |
-| Review | `requesting-code-review` | the diff | review findings fixed | no |
+| Review | `review` | the diff | findings table, fixes | yes |
 | PR | `finishing-a-development-branch` | the branch | pull request draft | yes |
 
 ## Rules

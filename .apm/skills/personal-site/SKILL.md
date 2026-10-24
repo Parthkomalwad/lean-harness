@@ -11,6 +11,7 @@ description: Use when I build a website for my own project. Quality first, from 
 | Design | `taste-skill` | spec, reference sites | `DESIGN.md` | yes |
 | UI | `ui-taste` | `DESIGN.md` | pages with the checks table | no |
 | Backend | `stack-pick` | spec | API, database, ADR | no |
+| Review | `review` | the code | findings table | yes |
 | Staging | `cheap-deploy` | the app | preview URL | yes |
 | Production | `cheap-deploy` | preview URL | live URL | yes |
 | Docs | `ship-docs` | live URL | `README.md`, demo video | no |
